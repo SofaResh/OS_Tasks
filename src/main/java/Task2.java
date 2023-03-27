@@ -14,17 +14,17 @@ public class Task2 {
         long startTime = System.currentTimeMillis();
         start1();
         long endTime = System.currentTimeMillis();
-        System.out.printf("Task 2.1 - %d ms%n", endTime - startTime);
+        System.out.printf("Task 2.1 - %d ms, i = %d%n", endTime - startTime, i);
 
         startTime = System.currentTimeMillis();
         start2();
         endTime = System.currentTimeMillis();
-        System.out.printf("Task 2.2 - %d ms%n", endTime - startTime);
+        System.out.printf("Task 2.2 - %d ms, i = %d%n", endTime - startTime, i);
 
         startTime = System.currentTimeMillis();
         start3();
         endTime = System.currentTimeMillis();
-        System.out.printf("Task 2.3 - %d ms%n", endTime - startTime);
+        System.out.printf("Task 2.3 - %d ms, i = %d%n", endTime - startTime, atom.get());
 
     }
 
@@ -76,8 +76,6 @@ public class Task2 {
         for (Thread thread : threads) {
             thread.join();
         }
-
-        System.out.printf("i = %d%n", i);
     }
 }
 
